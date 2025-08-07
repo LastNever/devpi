@@ -1,4 +1,4 @@
-# DevPI Docker 封装
+# DevPI Docker 一键构建、部署
 
 这是一个完整的DevPI私有PyPI服务器的Docker封装，包含了DevPI服务器、Web界面和Nginx反向代理。
 
@@ -123,10 +123,4 @@ docker-compose up -d
 ```bash
 # 进入容器
 docker-compose exec devpi bash
-
-# 检查服务状态
-supervisorctl status
-
-# 重启单个服务
-supervisorctl restart devpi-server
 ```
