@@ -28,7 +28,6 @@ docker-compose down
 
 - **DevPI服务器**: http://localhost:3141
 - **Web界面**: http://localhost:8080
-- **健康检查**: http://localhost:8080/health
 
 ### 3. 配置客户端
 
