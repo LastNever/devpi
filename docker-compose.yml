@@ -1,0 +1,14 @@
+
+services:
+  devpi:
+    build: .
+    container_name: devpi-server
+    ports:
+      - "3141:3141"  # devpi服务端口
+      - "8080:80"    # nginx反向代理端口
+    volumes:
+      - ./data:/devpi
+      - ./run.sh:/root/run.sh
+      - ./log:/log
+    restart: unless-stopped
+
