@@ -46,8 +46,12 @@ devpi index -c aliyun type=mirror bases=root/pypi mirror_url=https://mirrors.ali
 echo "创建豆瓣源索引..."
 devpi index -c douban type=mirror bases=root/pypi mirror_url=https://pypi.douban.com/simple/
 
-# 设置默认索引为清华源
-devpi use root/tsinghua
+# 创建自建库索引
+echo "创建自建库索引..."
+devpi index -c dev type=stage bases=root/aliyun
+
+# 设置默认索引为自建库
+devpi use root/dev
 
 echo "索引配置完成！"
 
